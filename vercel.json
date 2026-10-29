@@ -1,0 +1,5 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "npx --yes pnpm@12.3.4 install --frozen-lockfile",
+  "buildCommand": "if [ \"$VERCEL_ENV\" = \"preview\" ]; then SKIP_DB_CHECK=1 SKIP_DB_MIGRATION=1 npx --yes pnpm@12.3.4 run build; else npx --yes pnpm@12.3.4 run build; fi"
+}
